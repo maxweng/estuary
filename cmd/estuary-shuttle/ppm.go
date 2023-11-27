@@ -80,6 +80,11 @@ func (ppm *PeerPingManager) getSpList() ([]SpHost, error) {
 	var sps []SpHost
 
 	for _, m := range out {
+		if m.ChainInfo == nil {
+			log.Error(m.Addr)
+			continue
+		}
+		
 		ma, err := util.ToMultiAddresses(m.ChainInfo.Addresses)
 
 		if err != nil {
