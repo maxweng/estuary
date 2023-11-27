@@ -24,8 +24,8 @@ const MinSafeDealLifetime = 2880 * 21 // three weeks
 // miners who start their deals early don't run into issues
 const DealDuration = 1555200 - (2880 * 21)
 
-// MinDealContentSize 1 GB
-const MinDealContentSize = int64(1_100_000_000)
+// MinDealContentSize 0.1 GB
+const MinDealContentSize = int64(1_100_000_00)
 
 // MaxDealContentSize 31.66 GB
 const MaxDealContentSize = int64(34_000_000_000)
